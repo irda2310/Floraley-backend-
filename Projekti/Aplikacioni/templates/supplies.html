@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+{% extends 'index.html' %}
+{% load static %}
+{% block title %} About {% endblock %}
+{% block style %}
+    <link rel="stylesheet" href="{% static 'style/navbar.css' %}">{% endblock %}
+    {% block content %}
+    {% include "navbar2.html" %}
+    <section id="product1" class="section-p1">
+        <h2></h2>
+        <p></p>
+        <div class="Flowers">
+        <div class="pro-container">
+            <div class="pro">
+              <img src="https://i.pinimg.com/564x/bf/4a/e2/bf4ae216c92002b9652ab9fd817cc4d4.jpg"  height="330px"  alt="">
+                <div class="des">
+                    <span>Beige</span>
+                    <h6>vase</h6>
+                    <div class="star">
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+      
+              
+                  </div>
+                    <h4>$20</h4>
+                    <a href="" class="go-shopping">Buy</a>
+                </div>
+                
+            </div>
+        </div> 
+      
+      
+      
+      </section>
+      {% endblock %}
+      

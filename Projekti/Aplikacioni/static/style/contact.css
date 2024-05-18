@@ -1,0 +1,419 @@
+/*navbar*/
+.navbar{
+    background: white !important;
+}
+.nav-item .nav-link{
+    color: black;
+  
+}
+.dropdown-menu {
+    position:absolute;
+    background-color: #f1f1f1;
+    box-shadow: 0px 8px 16px 0px rgb(255, 204, 159);
+}
+    
+
+.main-container{
+    min-height: 100vh;
+    background-image:  url(https://images.pexels.com/photos/371433/pexels-photo-371433.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2);
+    background-size: cover; 
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    overflow: hidden;
+    display: block;
+    position: relative;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #000000;
+    font-size: 1.5rem;
+    
+}
+
+.head-text p{
+    text-align: center;
+    margin-bottom: 0;
+    font-size: 4rem;
+    color: white;
+ 
+    text-shadow: 2px 1px #000000;
+    font-family: Verdana, "Arial Black", Helvetica, sans-serif;
+}
+
+
+textarea{
+    resize: none;
+    height: 6rem;
+}
+
+input[type=text],input[type=email], textarea{
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+}
+
+input[type=text]:focus, textarea:focus, input[type=submit]:focus , input[type=email]:focus{
+    outline: none !important;
+    border: 2px solid #f8dc75;
+    padding: 11px;
+}
+
+input[type=submit]:focus{
+    padding: 10px 18px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+input[type=submit]{
+    background-color: white;
+    color: black;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    display: block;
+    margin-top: 2rem;
+    width: 100%;
+}
+
+input[type=submit]:hover{
+    background-color: white;
+    
+}
+
+.form{
+    margin: 1rem;
+    padding: 2rem;
+    border-radius: 5px;
+    background-color: rgba(216,219,226, 0.6);
+    color: #001440;
+    display: grid;
+}
+
+
+.container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  cursor: pointer;
+  font-size: 1rem;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.container input{
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.checkmark{
+    position: absolute;
+    top: 0;
+    left: 5px;
+    height: 20px;
+    width: 20px;
+    border-radius: 6px;
+    background-color: #eee;
+}
+
+.container:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+
+.container input:checked ~ .checkmark {
+    background-color: #f4ca30;
+}
+
+.checkmark:after{
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.container input:checked ~ .checkmark:after{
+    display: block;
+}
+
+.container .checkmark:after{
+    left: 6px;
+    top: 2px;
+    width: 4px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+/* ---------- MEDIA QUERIES ---------- 
+          
+          ----- TABLET ----- */
+@media screen and (min-width: 35rem){
+    body{
+        background: url(https://images.unsplash.com/photo-1459886374943-a132b91a6e96?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80);
+    
+        background-size: cover; 
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
+    /* rearrange form */
+    .form{
+        margin: 2rem;
+        display: grid;
+        grid-template-areas:
+            "name name-input name-input"
+            "email email-input email-input"
+            "text text-input text-input"
+            ". update update"
+            ". button button";
+        align-items: center;
+    }
+
+    /* define grid area names */
+    .name{
+        grid-area: name;
+    }
+
+    #name-input{
+        grid-area: name-input;
+    }
+
+    .email{
+        grid-area: email;
+    }
+
+    #email-input{
+        grid-area: email-input;
+    }
+
+    .text{
+        grid-area: text;
+    }
+
+    #text-input{
+        grid-area: text-input;
+    }
+
+    .container{
+        grid-area: update;
+    }
+
+    .button{
+        grid-area: button;
+    }
+}
+/*        ----- DESKTOP -----
+Desktop-view is 60rem and wider */
+@media screen and (min-width: 60rem){
+    body{
+        font-size: 1rem;
+        background: url(https://images.unsplash.com/photo-1459886374943-a132b91a6e96?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80);
+        /*Photo by Peter Oslanec*/
+        background-size: cover; 
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
+
+    /* set message textbox size */
+    textarea{
+        resize: vertical;
+    }
+    
+    .form{
+        margin: 3rem;
+        height: 60vh;
+        /* rearrange form */
+        grid-template-areas:
+            "name name . email email"
+            "name-input name-input . email-input email-input"
+            "text . . . ."
+            "text-input text-input text-input text-input text-input"
+            "update update . button button";
+    }
+
+    input[type=submit]{
+        margin-top: 0;
+    }
+}
+footer{
+    margin:0 0 0 0;
+    background-color: rgb(230, 230, 230);
+    }
+    #footer-container{
+    width: 100%;
+    display:flex; 
+    font-size: 1rem;
+    }
+    #footer-container>div{
+    margin:10px auto;
+    padding: 30px;
+    }
+    #footer-container>div>p{
+    color: rgb(91, 77, 77);
+    }
+    #footer-container>div>p>i{
+    margin: 3px 3px;
+    }
+    #copyright{
+    color: #6a6a6a;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    }
+    #line{
+    background-color: #c2c2c2;
+    width: 900px;
+    height:1.5px;
+    margin:0 auto;
+    }
+    #footer-container>div>p>a{
+    text-decoration: none;
+    color: rgb(145, 123, 123);
+    }
+    .footer>div{
+    margin: 5px auto;
+    width:10px;
+    align-items: center;
+    }
+    @media screen and (max-width: 1024px){
+      #text-map{
+        font-size: 20px;
+        margin:10px;
+        
+      }
+      #text-map>p{
+        padding:20px 0;
+        margin: 70px 0;
+      }
+    }
+    @media screen and (max-width: 768px){
+      #line{
+        width:100%;
+      }
+      .footer{
+        font-size: 13px;
+      }
+      #text-map{
+        font-size: 14px;
+        margin:20px 15px;
+      }
+      #text-map>p{
+        padding: 10px 0;
+      }
+    }
+    
+    @media screen and (max-width: 426px){
+      #map{
+        margin:0;
+        width: 100%;
+        height:200px;
+      }
+      #map>iframe{
+        width:100%;
+        height:200px;
+      }
+      #map-container{
+        display: block;
+      }
+      #footer-container{
+        display:block;
+        width: 100%;
+      }
+      #line{
+        width:100%;
+      }
+      #text-map{
+        font-size: 12px;
+      }
+      .footer{
+        font-size: 12px;
+        height: auto;
+      }
+      .footer>img{
+        width: 70px;
+        height: 70px;
+        margin:0 130px;
+      }
+    
+    }
+    @media screen and (max-width: 376px){
+      #map{
+        margin:0;
+        width: 100%;
+      }
+      #map>iframe{
+        width:100%;
+      }
+      #map-container{
+        display: block;
+      }
+      #footer-container{
+        display:block;
+        width: 100%;
+      }
+      #line{
+        width:100%;
+      }
+      #text-map{
+        font-size: 12px;
+      }
+      .footer{
+        font-size: 12px;
+        height: auto;
+      }
+      .footer>img{
+        width: 70px;
+        height: 70px;
+        margin:0 110px;
+      }
+    }
+    @media screen and (max-width: 320px){
+      #map{
+        margin:0;
+      }
+      #map-container{
+        display: block;
+      }
+      #footer-container{
+        display:block;
+        width: 100%;
+      }
+      #line{
+        width:100%;
+      }
+      #text-map{
+        font-size: 12px;
+      }
+      .footer{
+        font-size: 12px;
+        
+      }
+      .footer>img{
+        width: 70px;
+        height: 70px;
+        margin:0 80px;
+      }
+    } 
+    .messages {
+      margin-top: 20px;
+      padding: 10px;
+      background-color: #e4a0B7;
+      color: black;
+      border: 1px solid #e4a0B7;
+      text-align: center;
+    }
+    
+    .messages li {
+      margin-bottom: 5px;
+    }
+    
+    

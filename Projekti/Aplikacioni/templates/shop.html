@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+{% extends 'index.html' %}
+{% load static %}
+{% block title %} About {% endblock %}
+{% block style %}
+    <link rel="stylesheet" href="{% static 'style/shop.css' %}">{% endblock %}
+    {% block content %}
+    {% include "navbar2.html" %}
+    
+
+    <section id="product1" class="section-p1">
+      {% if prodShop %}
+      {% for product in prodShop %}
+        <h2></h2>
+        <p></p>
+        <div class="Flowers">
+        <div class="pro-container">
+            <div class="pro">
+              <img src="{{product.shop_img.url}}"  height="260px"  alt="">
+                <div class="des">
+                    <span>{{product.shop_color}}</span>
+                    <h6>{{product.shop_name}}
+                    </h6>
+                    <div class="star">
+                      {{product.shop_review|safe}}
+      
+              
+                  </div>
+                    <h4>${{product.shop_price}}</h4>
+                    <a href="" class="go-shopping">Buy</a>
+                </div>
+                
+            </div>
+        </div> 
+      </div>
+    
+        {% endfor %}
+        {% else %}
+<h1>{{prodCategory | length}} {{detCategory.category_name}} Products </h1>
+{% endif %}
+
+      
+      
+      
+      </section>
+      {% endblock %}
+      
+
+
+   

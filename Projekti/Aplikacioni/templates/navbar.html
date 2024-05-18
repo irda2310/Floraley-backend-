@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+{% extends 'index.html' %}
+{% load static %}
+{% block title %} About {% endblock %}
+{% block style %}
+    <link rel="stylesheet" href="{% static 'style/navbar.css' %}">{% endblock %}
+    {% block content %}
+{% include "navbar1.html" %}
+  <!--carousel-->
+<div id="carouselExampleCaptions" class="carousel slide">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      {% load static %}<img  src="{% static 'images/karusel1.jpg' %}" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-block ">
+        <h5>Floraley</h5>
+        <p class="paragraph">"Life is the flower for which love is the honey." Victor Hugo</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      {% load static %}<img  src="{% static 'images/karusel2.jpg' %}"  class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      {% load static %}<img  src="{% static 'images/karusel22.jpg' %}" class="d-block w-100" alt="...">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+<!--about us -->
+
+<div class="we-are-block">
+
+  <div id="about-us-section">
+
+    <div class="about-us-image">
+
+      <img src="https://images.pexels.com/photos/4207620/pexels-photo-4207620.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" width="811" height="950" alt="Lobby Image">
+
+    </div>
+
+    <div id="about" class="about-us-info">
+
+      <h2> Botanical Elegance </h2>
+
+      <p>Welcome to Floraley, your premier destination    for exquisite blooms and floral arrangements. At our flower shop, we believe in the power of flowers to brighten any occasion and bring joy to people's lives. With a passion for craftsmanship and an unwavering commitment to quality, we strive to provide our customers with the finest selection of fresh and vibrant flowers that will leave a lasting impression.</p>
+     
+      <a href="{% url 'about' %}" title="About Us Button">ABOUT US</a>
+
+    </div>
+
+  </div>
+
+  <div id="history-section">
+
+    <div class="history-image">
+
+      <img src="https://images.pexels.com/photos/4210784/pexels-photo-4210784.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" width="900" height="429" alt="Building Pic">
+
+    </div>
+
+    <div class="history-info">
+
+      <h2>Preserving Local History</h2>
+
+      <p>Floraley has a rich history that spans over years. Established in 2000, we began as a humble flower stand, passionately sharing our love for flowers with the local community. Over the years, our dedication to exceptional customer service and exquisite floral designs has allowed us to blossom into a renowned destination for floral enthusiasts and those seeking beautiful blooms for every occasion.</p>
+
+      <a href="{% url 'about' %}" title="History Button">HISTORY</a>
+
+    </div>
+
+  </div>
+
+  </div>
+
+<!--flowers-->
+<section id="product1" class="section-p1">
+  <h2>Flowers</h2>
+  <p id="paragraph">Looking for something extra special?</p>
+  <div class="Flowers">
+  <div class="pro-container">
+      <div class="pro">
+        <img src="https://i.pinimg.com/474x/69/57/6b/69576b469e834226d36eeaa8d335b047.jpg"  height="330px"  alt="">
+          <div class="des">
+              <span>Pink</span>
+              <h6>Rose</h6>
+              <div class="star">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+
+        
+            </div>
+              <h4>$20</h4>
+              <a href="" class="go-shopping">Buy</a>
+          </div>
+          
+      </div>
+  </div> 
+
+
+
+
+   
+       
+ <div class="pro-container">
+            <div class="pro">
+                <img src="https://i.pinimg.com/474x/63/54/54/6354545aecf97f9d161b10c18b53c7dd.jpg" height="330px" alt="">
+                <div class="des">
+                    <span>White</span>
+                    <h6>Tulip</h6>
+                    <div class="star">
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+    
+              
+                  </div>
+                    <h4>$29</h4>
+                    <a href="" class="go-shopping">Buy</a>
+                </div>
+                
+            </div>
+        </div> 
+
+
+
+        <div class="pro-container">
+          <div class="pro">
+              <img src="https://i.pinimg.com/474x/35/90/55/359055bde349900117ea7a678c669d98.jpg" height="330px" alt="">
+              <div class="des">
+                  <span>White</span>
+                  <h6>Nerium Oleander</h6>
+                  <div class="star">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+  
+            
+                </div>
+                  <h4>$25</h4>
+                  <a href="" class="go-shopping">Buy</a>
+              </div>
+              
+          </div>
+      </div> 
+    
+
+    
+      <div class="pro-container">
+        <div class="pro">
+          <img src="https://i.pinimg.com/474x/a3/e0/5b/a3e05b61582cb7fbdb74c921f68882e8.jpg" height="330px" alt="">
+            <div class="des">
+                <span>White</span>
+                <h6>Jazmin</h6>
+                <div class="star">
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+
+          
+              </div>
+                <h4>$39</h4>
+                <a href="" class="go-shopping">Buy</a>
+            </div>
+            
+        </div>
+    </div> 
+    
+  </div>
+  {% for kategoria in kategorit %}
+  <a href="{% url 'shop' kategoria.kategoria_id %}" class="more-products">More Products -></a>
+  {% endfor %}
+</section>
+
+
+
+<!--supplies-->
+<section id="product1" class="section-p1">
+<h2>Supplies</h2>
+<p id="paragraph">Looking for something extra special?</p>
+<div class="Supplies">
+<div class="pro-container">
+    <div class="pro">
+        <img src="https://cb2.scene7.com/is/image/CB2/ValoWhiteVaseSHF22/$web_pdp_main_carousel_xs$/220524125913/valo-matte-white-vase.jpg" alt="">
+        <div class="des">
+            <span>Beige</span>
+            <h6>Vase</h6>
+            <div class="star">
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+
+      
+          </div>
+            <h4>$25</h4>
+            <a href="" class="go-shopping">Buy</a>
+        </div>
+        
+    </div>
+</div> 
+
+
+
+
+ 
+     
+<div class="pro-container">
+          <div class="pro">
+              <img src="https://i.pinimg.com/474x/16/6e/44/166e443279f46384a3939b541867719e.jpg" alt="">
+              <div class="des">
+                  <span>Whites</span>
+                  <h6>3 Vases</h6>
+                  <div class="star">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+  
+            
+                </div>
+                  <h4>$75</h4>
+                  <a href="" class="go-shopping">Buy</a>
+              </div>
+              
+          </div>
+      </div> 
+
+
+
+      <div class="pro-container">
+        <div class="pro">
+            <img src="https://i.pinimg.com/564x/08/86/af/0886afef4a13d9a27de918cf662a52dc.jpg" alt="">
+            <div class="des">
+                <span>Beige</span>
+                <h6>Vase</h6>
+                <div class="star">
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+
+          
+              </div>
+                <h4>$25</h4>
+                <a href="" class="go-shopping">Buy</a>
+            </div>
+            
+        </div>
+    </div> 
+  
+    
+  
+    <div class="pro-container">
+      <div class="pro">
+        <img src="https://i.pinimg.com/474x/95/aa/e5/95aae5978080cbd5388ed9246d321442.jpg" alt="">
+          <div class="des">
+              <span>Beige</span>
+              <h6>Vase</h6>
+              <div class="star">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+
+        
+            </div>
+              <h4>$50</h4>
+              <a href="" class="go-shopping">Buy</a>
+          </div>
+          
+      </div>
+  </div>
+
+</div>
+{% for kategoria in kategorit %}
+  <a href="{% url 'shop' kategoria.kategoria_id %}" class="more-products">More Products -></a>
+{% endfor %}
+</section>
+<!--quote-->
+<section id="quote">
+        
+  <div id="quote-div">
+      <h4>“If you look the right way, you can see that the whole world is a garden.”– Frances Hodgson Burnett</h4>
+  </div>
+</section>
+
+
+<!--Blogu-->
+<h1 id="blogg">Blogs</h1>
+    <section id="blog-section">
+      {% for blog in blogs %}
+       
+        <div class="blog-container">
+            <div><img src="{{blog.blog_img.url}}" alt=" " width="100%" height="233.33"></div>
+            <p>{{blog.blog_date}}</p>
+            <h4>{{blog.blog_title}}</h4>
+            <p id="article-text">{{blog.blog_text}}...</p>
+            <p  id="read"> <a href="{% url 'blog' blog.blog_id %}"> READ POST</a></p>
+        </div>
+        {% endfor %}
+    </section>
+
+<!--subscribe-->
+      <div class="newsletter-form">
+        <div class="container-sub">
+          <h2 id="center">JOIN THE COMMUNITY!</h2>
+        <p id="centerr">Sign up to receive inspirational content to help you grow your business.</p> 
+        </div>
+        <form method="POST">
+          {% csrf_token %}
+          <div class="form-group row">
+            <div class="col-sm-4">
+              <input type="text"class="form-control" id="name" name="name_" placeholder="Your Name">
+            </div>
+            <div class="col-sm-4">
+              <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email address">
+            </div>
+            <div class="col-sm-4">
+            <button type="submit" id="subs">Subscribe</button>
+            {% if messages %}
+  <div class="messages">
+    {% for message in messages %}
+      <div class="alert alert-{{ message.tags }}">{{ message }}</div>
+    {% endfor %}
+  </div>
+{% endif %}
+            </div>
+          </div>
+        </form>
+
+      </div>
+     
+  <!--map dhe footer-->
+  <div id="map-container">
+    <div id="map"><iframe  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2996.3231677132544!2d19.8120612746686!3d41.32358557130806!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1350313540c99c4b%3A0x7398d6f11582ba30!2sDominusoft!5e0!3m2!1ssq!2s!4v1683287417624!5m2!1ssq!2s" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+    <div id="text-map"><p>"Stop and smell the roses at our flower shop! Our stunning arrangements and bouquets are guaranteed to brighten your day and bring joy to your loved ones. From classic roses to exotic orchids, we offer a wide variety of flowers to suit every taste and occasion. Come see us today and let us help you express your feelings through the beauty of nature."</p>
+    </div>
+    </div>
+    {% endblock %}
+  

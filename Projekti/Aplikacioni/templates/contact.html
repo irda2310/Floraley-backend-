@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+{% extends 'index.html' %}
+{% load static %}
+{% block title %} Contact {% endblock %}
+{% block style %}
+    <link rel="stylesheet" href="{% static 'style/contact.css' %}">{% endblock %}
+    {% block content %}
+    {% include "navbar2.html" %}
+    <div class="main-container">
+        <div class="head-text">
+            <p>Contact Us</p>
+        </div>
+        <form method="POST" class="form" >
+          {% csrf_token %}
+           
+            <label for="name-input" class="name">Name</label>
+            <input type="text" name="name_" id="name-input" required="required" placeholder="Your name ">
+
+            <label for="email-input" class="email">Email</label>
+            <input type="email" name="email" id="email-input" required="required" placeholder="Your email">
+
+            <label for="text-input" class="text">Message</label>
+            <textarea name="message" id="text-input" required="required"></textarea>
+                
+            <label for="subscribe" class="container">Yes, I'd like to revieve updates
+            <input type="checkbox" name="newsletter" id="subscribe" checked>
+            <span class="checkmark"></span>
+            </label>
+
+            <input type="submit" name="submit" class="button" value="Submit">
+            </form>
+            {% if messages %}
+        <ul class="messages">
+          {% for message in messages %}
+            <li {% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+    </div>
+        {% endblock %}

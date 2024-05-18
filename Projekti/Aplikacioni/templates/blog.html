@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+{% extends 'index.html' %}
+{% load static %}
+{% block title %} About {% endblock %}
+{% block style %}
+    <link rel="stylesheet" href="{% static 'style/navbar.css' %}">{% endblock %}
+    {% block content %}
+    {% include "navbar2.html" %}
+
+
+<div class="blog-post">
+	<div class="blog-hero">
+		<img src="{{fullblogs.fullblog_img.url}}" width="100%"
+    height="350">
+	</div>
+		<article>
+			
+			<div class="blog-content">
+				<summary>
+					<h3>{{ fullblogs.fullblog_title }}</h3>
+					<div class="blog-date">{{fullblogs.fullblog_date }}</div>
+				</summary>
+				<p>{{ fullblogs.fullblog_text }}</p>
+			</div>
+			<div class="blog-img">
+				<img src="{{fullblogs.fullblog_img2.url}}" width="600px" height="350px">
+			</div>
+			<div class="blog-content">
+				<p>{{ fullblogs.fullblog_text2 }}</p>
+			</div>	
+	</article>
+</div>
+{% endblock %}
+
+
+

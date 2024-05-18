@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+{% extends 'index.html' %}
+{% load static %}
+{% block title %} About {% endblock %}
+{% block style %}
+    <link rel="stylesheet" href="{% static 'style/navbar.css' %}">{% endblock %}
+    {% block content %}
+    {% include "navbar2.html" %}
+    <section >
+             <div class="about-section">
+              <h1>About us</h1>
+                <div id="video-div">
+                {% load static %}  <img  src="https://images.pexels.com/photos/4894603/pexels-photo-4894603.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" width="100%" >
+                </div>
+
+                <div>
+                   
+                   <div class="about-text">
+                    <div><p>Welcome to Floraley, your premier destination    for exquisite blooms and floral arrangements. At our flower shop, we believe in the power of flowers to brighten any occasion and bring joy to people's lives. With a passion for craftsmanship and an unwavering commitment to quality, we strive to provide our customers with the finest selection of fresh and vibrant flowers that will leave a lasting impression.</p>
+                        <p>With years of experience in the floral industry, our dedicated team of skilled florists possesses a deep understanding of the artistry and elegance that go into creating stunning floral designs. Whether you're looking for a bouquet for a special occasion, a floral centerpiece to adorn your event, or a heartfelt gift to express your emotions, we are here to turn your vision into reality. Each arrangement is carefully crafted with attention to detail.</p></div>
+                    <div><p>At Floraley, we believe in the importance of personalized service. Our knowledgeable staff takes the time to listen to your preferences and understand your specific needs, ensuring that we create a customized floral experience just for you. We are committed to exceeding your expectations and making your floral journey a memorable one. Whether you're seeking guidance on selecting the ideal flowers, we are here to assist you every step of the way.</p>
+                        <p>We take great pride in sourcing our flowers from trusted local growers and international suppliers, guaranteeing the highest quality and the freshest blooms. Sustainability is a core value for us, and we strive to minimize our environmental footprint through eco-friendly practices. From classic roses to exotic orchids, our extensive collection offers a wide range of options to suit any taste or occasion. Let us help you convey your heartfelt messages, celebrate life's special moments, and create memories.</p></div>
+                    
+                     </div>
+                    
+                </div>
+             </div>
+
+             <div class="about-section">
+              <h1>Preventing local history</h1>
+                <div id="video-div">
+                    {% load static %}  <img src="https://images.pexels.com/photos/7782200/pexels-photo-7782200.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" width="100%">
+                </div>
+
+                <div>
+                   
+                   <div class="about-text">
+                    <div><p>Floraley has a rich history that spans over years. Established in 2000, we began as a humble flower stand, passionately sharing our love for flowers with the local community. Over the years, our dedication to exceptional customer service and exquisite floral designs has allowed us to blossom into a renowned destination for floral enthusiasts and those seeking beautiful blooms for every occasion.</p>
+                        <p>Throughout our journey, we have remained committed to upholding the highest standards of quality and creativity. Our founder, started the business with a vision to create unique floral arrangements that would captivate the senses and touch the hearts of our customers. This vision continues to drive us today as we constantly strive to exceed expectations and create memorable experiences through the language of flowers.</p></div>
+                    <div><p>As the years went by, Floraley flourished, gaining a loyal clientele and expanding our services. We have had the privilege of working with esteemed clients, designing breathtaking arrangements for weddings, corporate events, and other special occasions. Our talented team of florists has honed their craft, mastering the art of floral design and staying abreast of the latest trends.</p>
+                        <p>While we embrace the traditions and techniques of the past, we also embrace innovation and embrace new floral trends. As we continue to grow, we constantly explore new avenues for creativity and expression, blending classic elegance with contemporary flair. We are proud to have played a small part in countless cherished moments and look forward to the opportunity to continue delivering beauty, joy, and enchantment through our passion for flowers.</p></div>
+                   </div>
+                    
+                </div>
+             </div>
+
+    </section>
+    <h1 style="text-align: center;margin-top: 100px;">Reviews</h1>
+<section id="review-section">
+    
+    {% for review in reviews %}
+    <section id="cards">
+    <div class="container py-2">
+        <div class="row pb-4">
+            <div class="col-12 text-center">
+                <div class="display-3"></div>
+            </div>
+        </div>
+        <!-- cards -->
+        
+        <div class="row">
+            <div class="col-lg-4 col-md-6 mb-4 pt-5">
+                <div class="card shadow-sm border-0">
+                    <div class="card-body ">
+                        <div class="user-picture">
+                            <img src="{{review.review_img.url}}" class="shadow-sm rounded-circle" height="130" width="130" />
+                        </div>
+                        <div class="user-content" style="margin-top: 15px;">
+                            <h5 class="text-capitalize user-name">{{review.review_name}}</h5>
+                            <p class=" text-capitalize text-muted small blockquote-footer">{{review.review_job}}</p>
+                            <div class="small">
+                                {{product.review_stars|safe}}
+                                
+                            </div>
+                            <p class="small text-muted mb-0">{{review.review_message}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            
+           
+    <!-- /cards -->
+</section>{% endfor %}
+<!-- /Ui cards -->
+</section>
+{% endblock %}
+
+
+
